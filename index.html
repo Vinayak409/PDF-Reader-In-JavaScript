@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://play-lh.googleusercontent.com/kIwlXqs28otssKK_9AKwdkB6gouex_U2WmtLshTACnwIJuvOqVvJEzewpzuYBXwXQQ=w240-h480-rw">
+    <script src="js/main.js" defer></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js" defer></script>
+    <title>PDF Viewer</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <button class="btn" id="prev-page">
+            <i class="fas fa-arrow-circle-left"></i> Prev Page
+        </button>
+        <button class="btn" id="next-page">
+            Next Page <i class="fas fa-arrow-circle-right"></i>
+        </button>
+        <span class="page-info">
+            Page <span id="page-num"></span> of <span id="page-count"></span>
+        </span>
+        <input type="text" id="input-page-num" placeholder="Enter the page number">
+        <button class="btn" id="go-to-page">Go To Page</button>
+
+        <input type="file" id="file-input" hidden="hidden">
+        <button class="btn" id="upload-pdf">
+            Upload PDF <i class="fas fa-arrow-circle-up"></i> 
+        </button>
+    </div>
+
+    <canvas id="pdf-render"></canvas>
+</body>
+
+</html>
